@@ -1,5 +1,8 @@
 img {-ms-interpolation-mode: bicubic;}
 video{width: 562px;height: 1014px;display: block;z-index: 2;position: absolute;top: 0;left: 0;}
+
+video.done{display: none;}
+
 #scratch {
   position: absolute;
   display: block;
@@ -9,11 +12,10 @@ video{width: 562px;height: 1014px;display: block;z-index: 2;position: absolute;t
   left:0;
   z-index:1;
 }
-#scratch img {
-  width: 562px;
-  height: 1014px
-  height: auto;
-}
+
+#scratch img {width: 562px;height: 1014px}
+#scratch.revealed canvas {opacity: 0;height: 0;}
+
 #scratch canvas {
   position: absolute;
   width: 100%;
@@ -31,4 +33,3 @@ video{width: 562px;height: 1014px;display: block;z-index: 2;position: absolute;t
   touch-action: none;
   transition: opacity 500ms ease-out 0ms, height 0ms linear 500ms;
 }
-#scratch.revealed canvas {opacity: 0;height: 0;}
